@@ -30,7 +30,8 @@ def swap_two_variables(a, b):
     (After swapping, `a` should now hold what `b` originally
     held, and `b` should hold what `a` originally held.)
     """
-    temp1,temp2 = a,b
-    b,a = temp1,temp2 
+    temp = a
+    a = b
+    b = temp
     return a,b
     pass
