@@ -1,0 +1,45 @@
+def is_subset(a, b):
+    """
+    a, b: Python sets
+
+    Returns:
+        True if every element of a is also in b (a is a subset of b,
+        written a subseteq b), False otherwise.
+    """
+    # TODO: Implement using Python's own set operations.
+    if len(a)==0:
+        return True
+    for i in a:
+        flag = False
+        for j in b:
+            if i == j:
+                flag = True
+                continue 
+        if flag == False:
+            break
+    return flag 
+    
+                
+    pass
+
+
+def argmax(values):
+    """
+    values: a non-empty list or tuple of numbers
+
+    Returns:
+        The INDEX of the largest value in values. If multiple values are
+        tied for the maximum, return the first such index.
+    """
+    # TODO: Implement argmax from Theory: scan once, tracking the best
+    # value and its index, updating only on a strictly larger value.
+    max = values[0]
+    max_idx = 0
+    for i in range(len(values)):
+        if values[i]>max:
+            max_idx,max = i,values[i]
+        else:
+            continue 
+    #print(max)
+    return max_idx
+    pass
